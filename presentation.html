@@ -715,7 +715,6 @@
 
   <p class="body fade-up fade-up-d1" style="max-width: 880px; font-size: 26px; margin-bottom: 56px;">
     Retail traders who want to learn from Elder face <span class="amber">two disconnected worlds</span>
-    — and bridging them is left as an exercise to the reader.
   </p>
 
   <div class="two-col fade-up fade-up-d2" style="flex: 1;">
@@ -813,10 +812,78 @@
 </section>
 
 
-<!-- =================== SLIDE 04 — TRIPLE SCREEN =================== -->
+<!-- =================== SLIDE 04 — ARCHITECTURE =================== -->
 <section class="slide" id="s4">
   <div class="grid-bg"></div>
-  <div class="slide-tag">03 / BACKGROUND</div>
+  <div class="slide-tag">03 / SYSTEM</div>
+
+  <h2 class="slide-title fade-up"><span class="hash">#</span>ARCHITECTURE</h2>
+
+  <div class="fade-up fade-up-d1" style="flex: 1; display: flex; flex-direction: column; gap: 20px;">
+    <!-- Top: UI layer -->
+    <div class="panel" style="padding: 20px 28px;">
+      <span class="br-tr"></span><span class="br-bl"></span>
+      <div class="panel-head">UI LAYER · STREAMLIT</div>
+      <div class="two-col" style="gap: 20px; margin-top: 10px;">
+        <div class="box box-hi" style="padding: 16px 20px;">
+          <div class="mono amber" style="font-size: 14px; letter-spacing: 0.2em;">DASHBOARD · 60%</div>
+          <div class="mono" style="font-size: 16px; margin-top: 6px; color: var(--text);">5 metric cards &nbsp;·&nbsp; 3 linked charts &nbsp;·&nbsp; live sliders</div>
+        </div>
+        <div class="box box-hi" style="padding: 16px 20px;">
+          <div class="mono amber" style="font-size: 14px; letter-spacing: 0.2em;">CHATBOT · 40%</div>
+          <div class="mono" style="font-size: 16px; margin-top: 6px; color: var(--text);">context bar &nbsp;·&nbsp; model selector &nbsp;·&nbsp; quick-ask</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mono faint" style="text-align: center; font-size: 22px;">│ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</div>
+
+    <!-- Middle: two engines -->
+    <div class="two-col" style="gap: 20px;">
+      <div class="panel" style="padding: 20px 28px;">
+        <span class="br-tr"></span><span class="br-bl"></span>
+        <div class="panel-head green" style="color: var(--green);">BACKTEST ENGINE</div>
+        <div class="mono" style="font-size: 15px; line-height: 1.9; color: var(--text); margin-top: 8px;">
+          ▸ yfinance data loader<br>
+          ▸ EMA / RSI / MACD (pandas)<br>
+          ▸ Long <i>and</i> short breakout signals<br>
+          ▸ Adjustable capital &amp; position size<br>
+          ▸ Return · Sharpe · MaxDD · Risk
+        </div>
+      </div>
+      <div class="panel" style="padding: 20px 28px;">
+        <span class="br-tr"></span><span class="br-bl"></span>
+        <div class="panel-head" style="color: var(--blue);">RAG PIPELINE</div>
+        <div class="mono" style="font-size: 15px; line-height: 1.9; color: var(--text); margin-top: 8px;">
+          ▸ <span class="amber">3 embedding models</span> swappable<br>
+          ▸ FAISS IndexFlatL2 · pre-built<br>
+          ▸ Top-k similarity retrieval<br>
+          ▸ Structured prompt · context injection<br>
+          ▸ <span class="amber">4 LLMs</span> selectable · any pair A/B
+        </div>
+      </div>
+    </div>
+
+    <div class="mono faint" style="text-align: center; font-size: 22px;">↓ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
+
+    <!-- Bottom: context builder -->
+    <div class="panel" style="padding: 20px 28px; border-color: var(--amber-dim);">
+      <span class="br-tr"></span><span class="br-bl"></span>
+      <div class="panel-head">★ CONTEXT BUILDER · the glue</div>
+      <div class="mono amber" style="font-size: 16px; margin-top: 6px;">
+        ticker · params · metrics · risk &nbsp;➜&nbsp; injected into LLM prompt
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-num">04 · ARCHITECTURE</div>
+</section>
+
+
+<!-- =================== SLIDE 05 — TRIPLE SCREEN =================== -->
+<section class="slide" id="s5">
+  <div class="grid-bg"></div>
+  <div class="slide-tag">04 / BACKGROUND</div>
 
   <h2 class="slide-title fade-up"><span class="hash">#</span>TRIPLE SCREEN<small>Elder's multi-filter system · from "Trading for a Living"</small></h2>
 
@@ -928,75 +995,7 @@
     </div>
   </div>
 
-  <div class="slide-num">04 · TRIPLE SCREEN</div>
-</section>
-
-
-<!-- =================== SLIDE 05 — ARCHITECTURE =================== -->
-<section class="slide" id="s5">
-  <div class="grid-bg"></div>
-  <div class="slide-tag">04 / SYSTEM</div>
-
-  <h2 class="slide-title fade-up"><span class="hash">#</span>ARCHITECTURE</h2>
-
-  <div class="fade-up fade-up-d1" style="flex: 1; display: flex; flex-direction: column; gap: 20px;">
-    <!-- Top: UI layer -->
-    <div class="panel" style="padding: 20px 28px;">
-      <span class="br-tr"></span><span class="br-bl"></span>
-      <div class="panel-head">UI LAYER · STREAMLIT</div>
-      <div class="two-col" style="gap: 20px; margin-top: 10px;">
-        <div class="box box-hi" style="padding: 16px 20px;">
-          <div class="mono amber" style="font-size: 14px; letter-spacing: 0.2em;">DASHBOARD · 60%</div>
-          <div class="mono" style="font-size: 16px; margin-top: 6px; color: var(--text);">5 metric cards &nbsp;·&nbsp; 3 linked charts &nbsp;·&nbsp; live sliders</div>
-        </div>
-        <div class="box box-hi" style="padding: 16px 20px;">
-          <div class="mono amber" style="font-size: 14px; letter-spacing: 0.2em;">CHATBOT · 40%</div>
-          <div class="mono" style="font-size: 16px; margin-top: 6px; color: var(--text);">context bar &nbsp;·&nbsp; model selector &nbsp;·&nbsp; quick-ask</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mono faint" style="text-align: center; font-size: 22px;">│ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</div>
-
-    <!-- Middle: two engines -->
-    <div class="two-col" style="gap: 20px;">
-      <div class="panel" style="padding: 20px 28px;">
-        <span class="br-tr"></span><span class="br-bl"></span>
-        <div class="panel-head green" style="color: var(--green);">BACKTEST ENGINE</div>
-        <div class="mono" style="font-size: 15px; line-height: 1.9; color: var(--text); margin-top: 8px;">
-          ▸ yfinance data loader<br>
-          ▸ EMA / RSI / MACD (pandas)<br>
-          ▸ Long <i>and</i> short breakout signals<br>
-          ▸ Adjustable capital &amp; position size<br>
-          ▸ Return · Sharpe · MaxDD · Risk
-        </div>
-      </div>
-      <div class="panel" style="padding: 20px 28px;">
-        <span class="br-tr"></span><span class="br-bl"></span>
-        <div class="panel-head" style="color: var(--blue);">RAG PIPELINE</div>
-        <div class="mono" style="font-size: 15px; line-height: 1.9; color: var(--text); margin-top: 8px;">
-          ▸ <span class="amber">3 embedding models</span> swappable<br>
-          ▸ FAISS IndexFlatL2 · pre-built<br>
-          ▸ Top-k similarity retrieval<br>
-          ▸ Structured prompt · context injection<br>
-          ▸ <span class="amber">4 LLMs</span> selectable · any pair A/B
-        </div>
-      </div>
-    </div>
-
-    <div class="mono faint" style="text-align: center; font-size: 22px;">↓ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
-
-    <!-- Bottom: context builder -->
-    <div class="panel" style="padding: 20px 28px; border-color: var(--amber-dim);">
-      <span class="br-tr"></span><span class="br-bl"></span>
-      <div class="panel-head">★ CONTEXT BUILDER · the glue</div>
-      <div class="mono amber" style="font-size: 16px; margin-top: 6px;">
-        ticker · params · metrics · risk &nbsp;➜&nbsp; injected into LLM prompt
-      </div>
-    </div>
-  </div>
-
-  <div class="slide-num">05 · ARCHITECTURE</div>
+  <div class="slide-num">05 · TRIPLE SCREEN</div>
 </section>
 
 
